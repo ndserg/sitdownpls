@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    "title": "Каталог"})
+  <body class="catalog">
+    @@include('html/header.html', {"title": "SitDownPls — интернет-магазин мебели", "page": "inner"})
+
+    <div class="catalog__wrapper container">
+      @@include('html/breadcrumb.html', {"breadcrumbs": ["Главная", "Каталог", "Диваны", "Прямые диваны"], "additional_class": " catalog__breadcrumb"})
+
+      <h1 class="catalog__title">Каталог</h1>
+
+      <aside class="catalog__aside">
+        <section class="filters">
+          <h2 class="filters__title">Фильтровать по:</h2>
+
+          <form class="filters__form" action="#" method="GET">
+            <fieldset class="filters__group">
+              <legend class="filters__group-title">Цвет</legend>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="color" id="color-brown" value="brown">
+              <label class="filters__label filters__label--checkbox checkbox-label" for="color-brown">Коричневый</label>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="color" id="color-black" value="black" checked>
+              <label class="filters__label filters__label--checkbox checkbox-label" for="color-black">Черный</label>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="color" id="color-blue" value="blue">
+              <label class="filters__label filters__label--checkbox checkbox-label" for="color-blue">Синий</label>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="color" id="color-white" value="white">
+              <label class="filters__label filters__label--checkbox checkbox-label" for="color-white">Белый</label>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="filters__group-title">Категория</legend>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="category" id="sofas" value="sofas" checked>
+              <label class="filters__label filters__label--checkbox checkbox-label" for="sofas">Диваны</label>
+
+              <input class="filters__checkbox checkbox-input visually-hidden" type="checkbox" name="category" id="armchairs" value="armchairs">
+              <label class="filters__label filters__label--checkbox checkbox-label" for="armchairs">Кресла</label>
+            </fieldset>
+
+            <fieldset class="filters__group filters__price">
+              <legend class="filters__group-title">Цена</legend>
+
+              <label class="filters__label" for="min-price">от</label>
+              <input class="filters__input-num input-num" type="text" name="min-price" id="min-price" value="2000">
+
+              <label class="filters__label" for="max-price">до</label>
+              <input class="filters__input-num input-num" type="text" name="max-price" id="max-price" value="150 000">
+            </fieldset>
+          </form>
+        </section>
+
+        <section class="catalog__promo promo promo--small">
+          <div class="promo__wrapper container">
+            <h2 class="visually-hidden">Рекламный блок</h2>
+
+            <div class="promo__info">
+              <div class="promo__info-wrapper">
+                <h3 class="promo__title">Оксфорд&nbsp;1950</h3>
+                <p class="promo__text">Новая&nbsp;коллекция изысканных&nbsp;кресел</p>
+              </div>
+            </div>
+
+            <a class="promo__link link-next" href="#" aria-label="В каталог">
+              <span class="link-next__text">В каталог</span>
+              <span class="link-next__icon-wrapper">
+                <svg class="link-next__icon" width="10" height="8" aria-hidden="true">
+                  <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </section>
+      </aside>
+
+      <main class="catalog__products">
+        @@include('html/catalog/catalog-list.html', {
+          "top_goods": [
+          {"title": "Диван кожаный", article: "“R&#8209;94”", "alt": "Диван кожаный “R-94”", "price": "94 990 руб", "rating": "5,0", "img": "top-rate-1"},
+          {"title": "Диван апартековый", article: "“T&#8209;75”", "alt": "Диван апартековый “T-75”", "price": "69 990 руб", "rating": "4,9", "img": "top-rate-2"},
+          {"title": "Диван тканевый", article: "“D&#8209;31”", "alt": "Диван тканевый “D-31”", "price": "28 490 руб", "rating": "4,8", "img": "top-rate-3"},
+          {"title": "Диван велюровый", article: "“Y&#8209;68”", "alt": "Диван велюровый “Y-68”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-4"},
+          {"title": "Диван из&nbsp;шинила", article: "“W&#8209;95”", "alt": "Диван из шинила “W-95”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-5"},
+          {"title": "Диван флоковый", article: "“G&#8209;41”", "alt": "Диван флоковый “G-41”", "price": "17 990 руб", "rating": "4,8", "img": "top-rate-6"},
+          {"title": "Диван шиниловый", article: "“V&#8209;43”", "alt": "Диван шиниловый “V-43”", "price": "19 990 руб", "rating": "4,8", "img": "top-rate-7"},
+          {"title": "Диван велюровый", article: "“S&#8209;99”", "alt": "Диван велюровый “S-99”", "price": "19 990 руб", "rating": "4,7", "img": "top-rate-8"},
+          ],
+        })
+      </main>
+    </div>
+
+    @@include('html/footer.html', {
+      "title": "SitDownPls — интернет-магазин мебели",
+      "about": ["О компании", "Блог"],
+      "services": ["Доставка", "Рассрочка и кредит", "Сборка и установка"],
+      "contacts": ["Обратная связь", "Контакты"],
+      "cooperation": ["Поставщикам", "Оптовикам", "Карьера"],
+    })
+
+    <script src="js/main.min.js"></script>
+    <script>
+      const products = [
+          {"title": "Диван кожаный", "article": "“R&#8209;94”", "alt": "Диван кожаный “R-94”", "price": "94 990 руб", "rating": "5,0", "img": "top-rate-1"},
+          {"title": "Диван апартековый", "article": "“T&#8209;75”", "alt": "Диван апартековый “T-75”", "price": "69 990 руб", "rating": "4,9", "img": "top-rate-2"},
+          {"title": "Диван тканевый", "article": "“D&#8209;31”", "alt": "Диван тканевый “D-31”", "price": "28 490 руб", "rating": "4,8", "img": "top-rate-3"},
+          {"title": "Диван велюровый", "article": "“Y&#8209;68”", "alt": "Диван велюровый “Y-68”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-4"},
+          {"title": "Диван из&nbsp;шинила", "article": "“W&#8209;95”", "alt": "Диван из шинила “W-95”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-5"},
+          {"title": "Диван флоковый", "article": "“G&#8209;41”", "alt": "Диван флоковый “G-41”", "price": "17 990 руб", "rating": "4,8", "img": "top-rate-6"},
+          {"title": "Диван шиниловый", "article": "“V&#8209;43”", "alt": "Диван шиниловый “V-43”", "price": "19 990 руб", "rating": "4,8", "img": "top-rate-7"},
+          {"title": "Диван велюровый", "article": "“S&#8209;99”", "alt": "Диван велюровый “S-99”", "price": "19 990 руб", "rating": "4,7", "img": "top-rate-8"},
+          {"title": "Диван из кожзама", "article": "“F&#8209;85”", "alt": "Диван из кожзама “F-85”", "price": "26 990 руб", "rating": "4,7", "img": "top-rate-9"},
+        ];
+
+      const pagination = new Pagination({
+        page:'.catalog',
+        container: '.catalog__list',
+        pagination: '.pagination',
+        data: [...products, ...products.reverse()],
+        elementsSetup: {
+          min: 6,
+          max: 9,
+          breakpoint: 1024
+        },
+      });
+
+      pagination.init()
+    </script>
+  </body>
+</html>

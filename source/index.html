@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    "title": "SitDownPls — интернет-магазин мебели"})
+  <body>
+    @@include('html/header.html', {"title": "SitDownPls — интернет-магазин мебели", "page": "main"})
+
+    @@include('html/main.html', {"title": "Главная страница интернет-магазина мебели SitDownPls"})
+
+    @@include('html/footer.html', {
+      "title": "SitDownPls — интернет-магазин мебели",
+      "about": ["О компании", "Блог"],
+      "services": ["Доставка", "Рассрочка и кредит", "Сборка и установка"],
+      "contacts": ["Обратная связь", "Контакты"],
+      "cooperation": ["Поставщикам", "Оптовикам", "Карьера"],
+    })
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+.banner__info {
+  display: grid;
+
+  grid-template-columns: repeat(6, 1fr);
+
+  column-gap: 16px;
+
+  padding-top: 30px;
+  padding-bottom: 126px;
+  margin-bottom: 32px;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.no-webp .banner__info {
+  background-image: url('@img/banners/banner.jpg');
+}
+
+.webp .banner__info {
+  background-image: url('@img/banners/banner.webp');
+}
+
+.banner__text {
+  grid-column: span 5;
+
+  padding-right: 18px;
+  padding-left: 18px;
+  margin: 0;
+
+  font-size: clamp(20px, 6.25vw, 48px);
+  font-weight: 700;
+  color: $gray-light;
+}
+
+.banner__btn {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
+@media (min-width: 580px) {
+  .banner {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+  }
+
+  .no-webp .banner {
+    background-image: url('@img/banners/banner.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner.webp');
+  }
+
+  .banner__info {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 50px;
+  }
+
+  .no-webp .banner__info,
+  .webp .banner__info {
+    background-image: none;
+  }
+
+  .banner__text {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .banner__btn {
+    width: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .banner__info {
+    grid-template-columns: repeat(9, 1fr);
+
+    column-gap: $gap;
+  }
+
+  .no-webp .banner {
+    background-image: url('@img/banners/banner-1024.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner-1024.webp');
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner__info {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .no-webp .banner {
+    background-image: url('@img/banners/banner-1340.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner-1340.webp');
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .no-webp .banner__info {
+    background-image: url('@img/banners/banner@2x.jpg');
+  }
+
+  .webp .banner__info {
+    background-image: url('@img/banners/banner@2x.webp');
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: 580px) {
+  .no-webp .banner {
+    background-image: url('@img/banners/banner@2x.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner@2x.webp');
+  }
+
+  .no-webp .banner__info,
+  .webp .banner__info {
+    background-image: none;
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $tablet-large) {
+  .no-webp .banner {
+    background-image: url('@img/banners/banner-1024@2x.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner-1024@2x.webp');
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $desktop-width) {
+  .no-webp .banner {
+    background-image: url('@img/banners/banner-1340@2x.jpg');
+  }
+
+  .webp .banner {
+    background-image: url('@img/banners/banner-1340@2x.webp');
+  }
+}

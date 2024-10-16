@@ -1,0 +1,80 @@
+.user-menu {
+  display: flex;
+
+  column-gap: 32px;
+
+  align-items: center;
+}
+
+.user-menu__btn {
+  padding: 0;
+
+  font-size: 0;
+  line-height: 0;
+  color: $primary;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  border: none;
+  outline: 4px solid transparent;
+
+  transition: color 0.3s, background-color 0.3s, outline 0.3s;
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:focus-visible {
+    color: $white;
+
+    background-color: $primary-hover;
+    outline-color: $primary-hover;
+  }
+
+  &:hover {
+    color: $primary-hover;
+
+    background-color: transparent;
+    outline-color: transparent;
+  }
+
+  &:active {
+    color: $primary-active;
+  }
+}
+
+.user-menu__btn--cart {
+  display: flex;
+
+  align-items: center;
+}
+
+.user-menu__cart-count {
+  display: flex;
+
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  max-width: 26px;
+  aspect-ratio: 1 / 1;
+  padding-top: 2px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  margin: 0;
+  margin-right: -3px;
+  overflow: hidden;
+
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 100%;
+  color: $white;
+  text-align: center;
+
+  background-color: $orange-default;
+  border-radius: 100%;
+}

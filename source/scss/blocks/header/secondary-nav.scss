@@ -1,0 +1,22 @@
+.secondary-nav__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  row-gap: 30px;
+  column-gap: 35px;
+
+  width: 100%;
+}
+
+.secondary-nav__link {
+  font-size: 14px;
+}
+
+@media (min-width: $tablet-large) {
+  .secondary-nav__list {
+    column-gap: 64px;
+
+    justify-content: flex-start;
+  }
+}

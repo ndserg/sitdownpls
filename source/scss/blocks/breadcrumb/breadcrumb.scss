@@ -1,0 +1,39 @@
+.breadcrumb {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .breadcrumb {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 32px;
+  }
+
+  .breadcrumb__item {
+    position: relative;
+
+    padding-right: 16px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 100%;
+    color: $gray-light;
+
+    &:not(:first-child) {
+      padding-right: 13px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        position: absolute;
+        right: 3px;
+
+        display: inline-block;
+
+        content: "/";
+      }
+    }
+  }
+}

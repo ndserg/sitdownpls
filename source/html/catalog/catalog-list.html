@@ -1,0 +1,12 @@
+<ul class="catalog__list list-reset">@@for (var i = 0; i < top_goods.length; i++) {
+  <li class="catalog__item">
+    @@include('../top-rated/top-rated-card.html', `+(JSON.stringify(top_goods[i]))+`)
+  </li>
+}
+</ul>
+
+<ul class="catalog__pagination pagination list-reset" aria-label="Страницы товаров">
+  <li class="pagination__item"><a class="pagination__link" href="#">1</a></li>
+  <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+  <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+</ul>

@@ -1,0 +1,77 @@
+<footer class="footer">
+  <div class="footer__wrapper container">
+    <div class="footer__main">
+      <a class="footer__logo-link logo-link" href="index.html">
+        <img class="footer__logo-img logo-img" src="@img/logo.svg" width="187" height="27" alt="логотип @@title">
+      </a>
+
+      <ul class="footer__socials socials list-reset">
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            Ссылка на соцсеть Вконтакте
+            <svg class="socials__icon" width="30" height="30" aria-hidden="true">
+              <use xlink:href="@img/icons/sprite.svg#icon-ok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="#" class="socials__link">
+            Ссылка на соцсеть Одноклассники
+            <svg class="socials__icon" width="30" height="30" aria-hidden="true">
+              <use xlink:href="@img/icons/sprite.svg#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="footer__nav footer-nav" aria-label="В футере">
+      <div class="footer-nav__block">
+        <h3 class="footer-nav__title">О нас</h3>
+
+        <ul class="footer-nav__list list-reset">@@for (var i = 0; i < about.length; i++) {
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link txt-link-light">`+about[i]+`</a>
+          </li>
+        }
+        </ul>
+      </div>
+
+      <div class="footer-nav__block">
+        <h3 class="footer-nav__title">Услуги</h3>
+
+        <ul class="footer-nav__list list-reset">@@for (var i = 0; i < services.length; i++) {
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link txt-link-light">`+services[i]+`</a>
+          </li>
+        }
+        </ul>
+      </div>
+
+      <div class="footer-nav__block">
+        <h3 class="footer-nav__title">Связь с нами</h3>
+
+        <ul class="footer-nav__list list-reset">@@for (var i = 0; i < contacts.length; i++) {
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__link txt-link-light">`+contacts[i]+`</a>
+          </li>
+        }
+        </ul>
+      </div>
+
+      <div class="footer-nav__block">
+        <h3 class="footer-nav__title">Сотрудничество</h3>
+
+        <ul class="footer-nav__list list-reset">@@for (var i = 0; i < cooperation.length; i++) {
+          <li class="footer-nav__item">
+            <a href="cooperation.html" class="footer-nav__link txt-link-light">`+cooperation[i]+`</a>
+          </li>
+        }
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="footer__bottom">
+    SDP®&nbsp;&nbsp;&nbsp;2011-2021
+  </div>
+</footer>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    "title": "Диван тканевый прямой “D-31”"})
+  <body>
+    @@include('html/header.html', {"title": "SitDownPls — интернет-магазин мебели", "page": "inner"})
+
+    <div class="product container">
+      @@include('html/breadcrumb.html', {"breadcrumbs": ["Главная", "Каталог", "Диваны", "Прямые диваны", "D-31"], "additional_class": ""})
+
+      <main class="product__main">
+        <div class="product__info">
+          <div class="product__main-descr">
+            <h1 class="product__title">Диван тканевый прямой “D&#8209;31”</h1>
+
+            <p class="product__rating">
+              <svg class="product__rating-icon" width="16" height="15" aria-hidden="true">
+                <use xlink:href="@img/icons/sprite.svg#icon-star"></use>
+              </svg>
+              <span class="visually-hidden">Рейтинг товара: </span>
+              4.8
+            </p>
+
+            <p class="product__short-desc">
+              Мини 120 см без ящика Stark синий (Рогожка)
+            </p>
+
+            <p class="product__price">28 490 руб</p>
+
+            <div class="product__info-buttons">
+              <button class="product__info-buy btn-primary" type="button">Купить в один клик</button>
+              <button class="product__info-add" type="button">+ Добавить в корзину</button>
+            </div>
+          </div>
+
+          <div class="product__img-wrapper">
+            <picture>
+              <source srcset="@img/products/product.webp 1x, @img/products/product@2x.webp 2x" type="image/webp">
+              <img class="product__img" src="@img/products/product.png" srcset="@img/products/product@2x.png 2x" width="296" height="116" loading="lazy" alt="Диван тканевый прямой “D-31”">
+            </picture>
+          </div>
+        </div>
+
+        <div class="product__spec">
+          <div class="product__spec-descr">
+            <h2 class="product__spec-title">Опорный механизм</h2>
+
+            <p class="product__text">
+              Опорный механизм напоминает пантограф, к&nbsp;которому добавили дополнительную секцию. У&nbsp;опорного дивана сиденье &laquo;выпрыгивает&raquo; вперёд и&nbsp;вытаскивает вторую часть спального места. Заключительный штрих&nbsp;&mdash; опустить спинку.
+            </p>
+
+            <p class="product__text">
+              Этот механизм не&nbsp;портит пол и&nbsp;не&nbsp;боится ковров. Требуется чуть больше силы, чтобы разложить диван, но&nbsp;подросток справится.
+            </p>
+
+            <figure class="product__shemes">
+              <picture>
+                <source srcset="@img/products/sheme-1.webp 1x, @img/products/sheme-1@2x.webp 2x" type="image/webp">
+                <img class="product__sheme-img" src="@img/products/sheme-1.png" srcset="@img/products/sheme-1@2x.png 2x" width="247" height="113" loading="lazy" alt="Диван во время разборки">
+              </picture>
+
+              <picture>
+                <source srcset="@img/products/sheme-2.webp 1x, @img/products/sheme-2@2x.webp 2x" type="image/webp">
+                <img class="product__sheme-img" src="@img/products/sheme-2.png" srcset="@img/products/sheme-2@2x.png 2x" width="247" height="113" loading="lazy" alt="Диван в разобранном состоянии">
+              </picture>
+
+              <figcaption class="visually-hidden">Схемы товара</figcaption>
+            </figure>
+          </div>
+
+          @@include('html/product/product-options.html', {
+            "options": [
+            {"name": "Гарантия", "descr": "18 месяцев"},
+            {"name": "Артикул", "descr": "AAA41269004"},
+            {"name": "Длина", "descr": "163 см"},
+            {"name": "Высота", "descr": "90 см"},
+            {"name": "Глубина", "descr": "108 см"},
+            {"name": "Спальное место", "descr": "200 см х 125 см"},
+            {"name": "Высота посадки", "descr": "45 см"},
+            {"name": "Механизм", "descr": "Опорный"},
+            {"name": "Тип обивки", "descr": "Рогожка"},
+            {"name": "Цвет", "descr": "Синий"},
+            {"name": "Наполнитель", "descr": "Независимый пружинный блок"},
+            {"name": "Материал каркаса", "descr": "Металл. рама с дерев. латами"},
+            {"name": "Количество мест", "descr": "Двухместные"},
+            {"name": "Категория", "descr": "Прямые тканевые диваны"},
+            {"name": "Возврат", "descr": "Условия"},
+            ]})
+        </div>
+      </main>
+
+      <aside class="product__similar top-rated">
+        <h2 class="product__similar-title">Похожие товары</h2>
+
+        @@include('./html/top-rated/top-rated-list.html', {
+          "top_goods": [
+            {"title": "Диван велюровый", article: "“R&#8209;85”", "alt": "Диван велюровый “R-85”", "price": "34 990 руб", "rating": "4,5", "img": "top-rate-10"},
+            {"title": "Диван флоковый", article: "“H&#8209;58”", "alt": "Диван флоковый “H-58”", "price": "23 990 руб", "rating": "4,6", "img": "top-rate-11"},
+            {"title": "Диван велюровый", article: "“S&#8209;44”", "alt": "Диван велюровый “S-44”", "price": "19 990 руб", "rating": "4,5", "img": "top-rate-12"},
+            {"title": "Диван шиниловый", article: "“V&#8209;43”", "alt": "Диван шиниловый “V-43”", "price": "19 990 руб", "rating": "4,8", "img": "top-rate-7"},
+          ],
+          })
+      </aside>
+    </div>
+
+    @@include('html/footer.html', {
+      "title": "SitDownPls — интернет-магазин мебели",
+      "about": ["О компании", "Блог"],
+      "services": ["Доставка", "Рассрочка и кредит", "Сборка и установка"],
+      "contacts": ["Обратная связь", "Контакты"],
+      "cooperation": ["Поставщикам", "Оптовикам", "Карьера"],
+    })
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

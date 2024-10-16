@@ -1,0 +1,38 @@
+.top-rated__list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+}
+
+.top-rated__item {
+  font-size: 0;
+  line-height: 0;
+}
+
+.top-rated__item:nth-child(n + 7) {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .top-rated__list {
+    gap: $gap;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .top-rated__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .top-rated__list {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  }
+
+  .top-rated__item:nth-child(n + 6) {
+    display: block;
+  }
+}

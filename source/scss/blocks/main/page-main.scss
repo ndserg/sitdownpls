@@ -1,0 +1,15 @@
+.page-main {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 70px;
+
+  margin-bottom: 70px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    margin-bottom: 68px;
+  }
+}

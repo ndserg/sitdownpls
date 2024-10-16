@@ -1,0 +1,67 @@
+<header class="header header--@@page">
+  <div class="header__wrapper container">
+    <div class="header__logo">
+      <a class="header__logo-link logo-link" href="index.html">
+        <img class="header__logo-img logo-img" src="@img/logo.svg" width="187" height="27" alt="логотип @@title">
+      </a>
+    </div>
+
+    <a class="header__phone" href="tel:+74958854547" aria-label="Связаться с нами">
+      <svg class="header__phone-icon" width="18" height="18" aria-hidden="true">
+        <use xlink:href="@img/icons/sprite.svg#icon-phone"></use>
+      </svg>
+      <span>+7 (495) 885-45-47</span>
+    </a>
+
+    <nav class="header__secondary-nav secondary-nav" aria-label="Дополнительная">
+      @@include('header/secondary-nav.html', {
+        "navigations": ["О компании", "Гарантия и возврат", "Корпоративным клиентам", "Дизайн-решение"]
+      })
+    </nav>
+
+    <div class="header__user user-menu">
+      <button class="user-menu__btn user-menu__btn--login" type="button" aria-label="Логин">
+        <svg class="header__phone-icon" width="26" height="28" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-user"></use>
+        </svg>
+      </button>
+
+      <button class="user-menu__btn user-menu__btn--cart" type="button" aria-label="Корзина покупок">
+        <span class="visually-hidden">Количество товаров в корзине</span>
+        <span class="user-menu__cart-count">0</span>
+        <svg class="header__phone-icon" width="30" height="28" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-shopping-cart"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="header__nav main-nav" aria-label="Основная">
+      @@include('header/main-nav.html', {
+        "navigations": [
+        {"title": "Каталог", "link": "catalog.html"},
+        {"title": "Магазины", "link": "#"},
+        {"title": "Шоу-рум", "link": "#"},
+        {"title": "Доставка и оплата", "link": "#"},
+        {"title": "Дисконт", "link": "#"},
+        {"title": "Контакты", "link": "#"},
+        ],
+      })
+    </nav>
+
+    <div class="header__search search">
+      <input class="search__input" type="text" name="search" id="search" placeholder="Я хочу купить...">
+      <label class="search__label" for="search" aria-label="Поиск по сайту">
+        <svg class="search__icon" width="17" height="16" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-search"></use>
+        </svg>
+      </label>
+
+      <button class="search__btn btn-next" type="button">
+        Искать
+        <svg class="search__icon" width="11" height="12" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

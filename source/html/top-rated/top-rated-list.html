@@ -1,0 +1,6 @@
+<ul class="top-rated__list list-reset">@@for (var i = 0; i < top_goods.length; i++) {
+  <li class="top-rated__item">
+    @@include('top-rated-card.html', `+(JSON.stringify(top_goods[i]))+`)
+  </li>
+}
+</ul>

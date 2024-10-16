@@ -1,0 +1,343 @@
+.header {
+  padding-bottom: 1px;
+  margin-bottom: $gap;
+  overflow-x: hidden;
+
+  &--inner {
+    padding-bottom: 0;
+    margin-bottom: 24px;
+  }
+}
+
+.header__wrapper {
+  display: grid;
+
+
+  grid-template-areas:
+    "logo logo"
+    "phone user"
+    "nav nav"
+    "search search";
+  grid-template-columns: minmax(min-content, 1fr) 1fr;
+
+  row-gap: 16px;
+}
+
+.header__logo {
+  position: relative;
+
+  display: flex;
+
+  grid-area: logo;
+
+  align-items: center;
+  justify-content: center;
+
+  height: 50px;
+
+  background-color: $input-default-bg;
+
+  &::after {
+    position: absolute;
+    bottom: -16px;
+
+    display: block;
+
+    width: 200vw;
+    height: 1px;
+    margin-left: calc(50% - 50vw);
+
+    content: "";
+
+    background-color: $input-default-bg;
+  }
+}
+
+.header__phone {
+  display: flex;
+
+  grid-area: phone;
+
+  column-gap: 2px;
+
+  align-items: center;
+
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding-left: 2px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $orange-default;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  outline: none;
+
+  transition: background-color 0.3s, color 0.3s;
+
+  svg {
+    fill: currentColor;
+  }
+
+  &:focus {
+    background-color: $orange-focus;
+  }
+
+  &:hover {
+    color: $orange-hover;
+
+    background-color: transparent;
+  }
+
+  &:active {
+    color: $orange-active;
+  }
+}
+
+.header__phone-icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.header__nav {
+  position: relative;
+
+  grid-area: nav;
+
+  width: 100%;
+  min-height: 20px;
+  overflow-x: visible;
+
+  &::before {
+    position: absolute;
+    top: -16px;
+
+    display: block;
+
+    width: 200vw;
+    height: 1px;
+    margin-left: calc(50% - 50vw);
+
+    content: "";
+
+    background-color: $input-default-bg;
+  }
+}
+
+.header__user {
+  grid-area: user;
+
+  justify-self: end;
+
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.header__secondary-nav {
+  display: none;
+
+  grid-area: smenu;
+}
+
+.header__search {
+  grid-area: search;
+
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    height: auto;
+    padding-top: 15px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .header__wrapper {
+    grid-template-areas:
+      "phone phone phone phone phone phone"
+      "smenu smenu smenu smenu smenu smenu"
+      "logo logo user user user user"
+      "nav nav nav nav nav nav"
+      "search search search search search search";
+      grid-template-columns: repeat(6, 1fr);
+
+    row-gap: 32px;
+    column-gap: 32px;
+  }
+
+  .header__logo {
+    position: relative;
+    top: initial;
+    right: initial;
+    left: initial;
+
+    justify-self: start;
+
+    height: initial;
+    margin-left: -4px;
+
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .header__phone {
+    display: inline-flex;
+
+    justify-self: start;
+
+    margin-bottom: -16px;
+    overflow: initial;
+  }
+
+  .header__nav {
+    min-height: 22px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .header__user {
+    justify-self: end;
+
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -1px;
+  }
+
+  .header__secondary-nav {
+    position: relative;
+
+    display: block;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    background-color: $input-default-bg;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: calc(-1 * (100vw - 100%) / 2);
+      z-index: -1;
+
+      display: block;
+
+      width: 200vw;
+      height: 100%;
+
+      content: "";
+
+      background-color: $input-default-bg;
+    }
+  }
+
+  .header__search {
+    width: calc(100% + 8px);
+    margin: 0;
+    margin-left: -4px;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .header__wrapper {
+    display: grid;
+
+
+    grid-template-areas:
+      "phone phone . . . . . . ."
+      "smenu smenu smenu smenu smenu smenu smenu user user"
+      "logo logo nav nav nav nav nav nav nav"
+      "search search search search search search search . .";
+    grid-template-columns: repeat(9, 1fr);
+  }
+
+  .header__phone {
+    margin-bottom: -18px;
+  }
+
+  .header__logo {
+    margin-left: 0;
+  }
+
+  .header__nav {
+    justify-self: end;
+
+    max-width: 701px;
+    padding-top: 2px;
+  }
+
+  .header__user {
+    margin-top: 0;
+  }
+
+  .header__search {
+    grid-area: search;
+
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding-top: 0;
+  }
+
+  .header__wrapper {
+    display: grid;
+
+
+    grid-template-areas:
+      "phone phone . smenu smenu smenu smenu smenu smenu smenu smenu smenu"
+      "logo logo . nav nav nav nav nav nav nav nav nav"
+      "search search search search search search search search search search user user";
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .header__phone {
+    padding-top: 2px;
+    margin-bottom: 0;
+  }
+
+  .header__nav {
+    max-width: unset;
+    padding-top: 4px;
+    padding-right: 3px;
+  }
+
+  .header__secondary-nav {
+    justify-self: end;
+
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: calc(-1 * (100vw - 100%) / 2);
+      left: initial;
+      z-index: -1;
+
+      display: block;
+
+      width: 200vw;
+      height: 100%;
+
+      content: "";
+
+      background-color: $input-default-bg;
+    }
+  }
+}

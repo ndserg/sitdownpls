@@ -1,0 +1,134 @@
+<main class="page-main">
+  <h1 class="visually-hidden">@@title</h1>
+
+  <section class="banner">
+    <h2 class="visually-hidden">Скидки</h2>
+
+
+    <div class="banner__info container">
+      <p class="banner__text">Скидка 15% на&nbsp;первую&nbsp;покупку</p>
+    </div>
+
+    <div class="banner__wrapper container">
+      <button class="banner__btn btn-primary" type="button">Получить!</button>
+    </div>
+  </section>
+
+  <section class="specials">
+    <div class="container">
+      <h2 class="specials__title section-title">Специальные предложения</h2>
+
+      @@include('specials/specials-list.html', {
+      "goods": [
+      {"title": "Кресло велюровое", article: "“X&#8209;24”", "alt": "Кресло велюровое “X-24”", "new_price": "15 990 руб", "old_price": "24 990 руб", "img": "specials-1", "discount": "- 9 000", "img_big": false, "scheme": false},
+      {"title": "Диван тканевый", article: "“Z&#8209;44”", "alt": "Диван тканевый “Z-44”", "new_price": "22 990 руб", "old_price": "32 990 руб", "img": "specials-2", "discount": "- 10 000", "img_big": "specials-big-2", "scheme": "specials-scheme-2"},
+      {"title": "Будильник", article: "“Quartz&#8209;23”", "alt": "Будильник  “Quartz-23”", "new_price": "1 290 руб", "old_price": "1 890 руб", "img": "specials-3", "discount": "- 600", "img_big": false, "scheme": false},
+      {"title": "Мини&#8209;скульптура", article: "“Oh my deer”", "alt": "Мини-скульптура “Oh my deer”", "new_price": "690 руб", "old_price": "990 руб", "img": "specials-4", "discount": "- 300", "img_big": false, "scheme": false},
+      {"title": "Диван вел-флок", article: "“Z&#8209;85”", "alt": "Диван вел-флок “Z-85”", "new_price": "22 990 руб", "old_price": "32 990 руб", "img": "specials-5", "discount": "- 10 000", "img_big": false, "scheme": false},
+      {"title": "Термометр +", article: "гидрометр “H&#8209;18”", "alt": "Термометр + гидрометр “H-18”", "new_price": "1 390 руб", "old_price": "2 090 руб", "img": "specials-6", "discount": "- 700", "img_big": false, "scheme": false},
+      ],
+      })
+    </div>
+  </section>
+
+  <section class="top-rated">
+    <div class="container">
+      <h2 class="top-rated__title section-title">Высокий рейтинг</h2>
+
+      @@include('top-rated/top-rated-list.html', {
+      "top_goods": [
+      {"title": "Диван кожаный", article: "“R&#8209;94”", "alt": "Диван кожаный “R-94”", "price": "94 990 руб", "rating": "5,0", "img": "top-rate-1"},
+      {"title": "Диван апартековый", article: "“T&#8209;75”", "alt": "Диван апартековый “T-75”", "price": "69 990 руб", "rating": "4,9", "img": "top-rate-2"},
+      {"title": "Диван тканевый", article: "“D&#8209;31”", "alt": "Диван тканевый “D-31”", "price": "28 490 руб", "rating": "4,8", "img": "top-rate-3"},
+      {"title": "Диван велюровый", article: "“Y&#8209;68”", "alt": "Диван велюровый “Y-68”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-4"},
+      {"title": "Диван из&nbsp;шинила", article: "“W&#8209;95”", "alt": "Диван из шинила “W-95”", "price": "22 990 руб", "rating": "4,8", "img": "top-rate-5"},
+      {"title": "Диван флоковый", article: "“G&#8209;41”", "alt": "Диван флоковый “G-41”", "price": "17 990 руб", "rating": "4,8", "img": "top-rate-6"},
+      {"title": "Диван шиниловый", article: "“V&#8209;43”", "alt": "Диван шиниловый “V-43”", "price": "19 990 руб", "rating": "4,8", "img": "top-rate-7"},
+      {"title": "Диван велюровый", article: "“S&#8209;99”", "alt": "Диван велюровый “S-99”", "price": "19 990 руб", "rating": "4,7", "img": "top-rate-8"},
+      ],
+      })
+    </div>
+  </section>
+
+  <section class="promo">
+    <h2 class="visually-hidden">Рекламный блок</h2>
+
+    <div class="promo__info container">
+      <div class="promo__info-wrapper">
+        <h3 class="promo__title">Оксфорд&nbsp;1950</h3>
+        <p class="promo__text">Новая&nbsp;коллекция изысканных&nbsp;кресел</p>
+      </div>
+    </div>
+
+    <div class="promo__btn-wrapper container">
+      <button class="promo__btn btn-primary" type="button">Ознакомиться</button>
+    </div>
+  </section>
+
+  <section class="top-categories">
+    <div class="container">
+      <h2 class="top-categories__title section-title">Топ категории</h2>
+
+      @@include('top-categories/categories-list.html', {
+        "categories": [
+        {"title": "Диваны", "sub_categories": ["Прямые", "Угловые", "Модульные"], "img_class": "sofa", "is_main": true},
+        {"title": "Кровати", "sub_categories": ["Односпальные", "Двуспальные"], "img_class": "bed", "is_main": false},
+        {"title": "Кресла", "sub_categories": ["Мягкие", "Кресла-кровати"], "img_class": "armchair", "is_main": false},
+        {"title": "Тумбы и&nbsp;комоды", "sub_categories": ["Тумбы", "Комоды"], "img_class": "dresser", "is_main": false},
+        {"title": "Стулья", "sub_categories": ["Деревянные", "Металлокаркас"], "img_class": "chair", "is_main": false},
+        ],
+      })
+    </div>
+  </section>
+
+  <section class="useful">
+    <div class="container">
+      <h2 class="useful__title section-title">Полезное</h2>
+
+      @@include('useful/useful-list.html', {
+        "articles": [
+        "И&nbsp;нет сомнений, что сделанные на&nbsp;базе интернет&#8209;аналитики выводы представляют собой не&nbsp;что иное?",
+        "Как принято считать, некоторые особенности приносят несомненную пользу обществу?",
+        "Ясность нашей позиции очевидна: укрепление и развитие внутренней структуры?",
+        "Прежде всего, консультация с широким активом однозначно фиксирует необходимость распределения?",
+        "Как принято считать, некоторые особенности приносят несомненную пользу обществу?",
+        ],
+      })
+    </div>
+  </section>
+
+  <section class="feedback">
+    <div class="feedback__wrapper container">
+      <div class="feedback__form-content">
+        <h2 class="feedback__title section-title" aria-label="Форма обратной связи. Мы всегда вам рады!">Мы всегда вам рады!</h2>
+
+        <p class="feedback__intro">
+          Безусловно, новая модель организационной деятельности в&nbsp;значительной степени обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
+        </p>
+
+        <form class="feedback__form" action="#" method="GET">
+          <label class="visually-hidden" for="user-name">Введите ваше имя</label>
+          <input class="feedback__input form-input" type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
+
+          <label class="visually-hidden" for="phone">Введите ваш телефон</label>
+          <input class="feedback__input form-input" type="text" name="phone" id="phone" placeholder="Ваш телефон">
+
+          <label class="visually-hidden" for="email">Введите ваш e-mail</label>
+          <input class="feedback__input form-input" type="email" name="email" id="email" placeholder="Ваш e-mail">
+
+          <fieldset class="feedback__submit-group">
+            <legend class="visually-hidden">Примите пользовательское соглашение перед отправкой</legend>
+
+            <input class="feedback__checkbox checkbox-input visually-hidden" type="checkbox" name="agreement" id="agreement" checked>
+            <label class="feedback__checkbox-label checkbox-label" for="agreement">
+              <span>Принимаю</span>
+              <a class="feedback__checkbox-link" href="#">пользовательское соглашение</a>
+            </label>
+
+            <button class="feedback__btn btn-primary" type="submit">Отправить</button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>

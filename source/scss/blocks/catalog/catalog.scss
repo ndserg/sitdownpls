@@ -1,0 +1,164 @@
+.catalog__products {
+  margin-bottom: 70px;
+}
+
+.catalog__wrapper {
+  position: relative;
+}
+
+.catalog__aside {
+  margin-bottom: 30px;
+}
+
+.catalog__promo {
+  display: none;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 130%;
+  color: $gray-dark;
+}
+
+.catalog__list {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog__wrapper {
+    padding-top: 0;
+  }
+
+  .catalog__breadcrumb {
+    margin-bottom: 32px;
+  }
+
+  .catalog__aside {
+    margin-bottom: 23px;
+  }
+
+  .catalog__title {
+    margin-bottom: 26px;
+  }
+
+  .catalog__list {
+    gap: $gap;
+  }
+
+  .catalog__item {
+    &:nth-child(1) {
+      order: -4
+    }
+
+    &:nth-child(2) {
+      order: -3
+    }
+
+    &:nth-child(3) {
+      order: -1
+    }
+
+    &:nth-child(4) {
+      order: -2
+    }
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .catalog__products {
+    margin-bottom: 67px;
+  }
+
+  .catalog__aside {
+    margin-bottom: 26px;
+  }
+
+  .catalog__list {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: $gap;
+  }
+
+  .catalog__item {
+    &:nth-child(1) {
+      order: 0
+    }
+
+    &:nth-child(2) {
+      order: 0
+    }
+
+    &:nth-child(3) {
+      order: 0
+    }
+
+    &:nth-child(4) {
+      order: 0
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog__wrapper {
+    display: grid;
+
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: repeat(12, 1fr);
+
+    column-gap: $gap;
+  }
+
+  .catalog__breadcrumb {
+    grid-column: span 12;
+
+    margin-bottom: $gap;
+  }
+
+  .catalog__aside {
+    display: flex;
+
+    flex-direction: column;
+
+    grid-row: 2 / 4;
+    grid-column: span 3;
+
+    row-gap: $gap;
+
+    padding-bottom: 134px;
+    margin-bottom: 0;
+  }
+
+  .catalog__promo {
+    display: block;
+
+    margin-top: auto;
+  }
+
+  .catalog__products {
+    grid-row: 3 / 4;
+    grid-column: 4 / 13;
+
+    margin-bottom: 70px;
+  }
+
+  .catalog__title {
+    grid-row: 2 / 3;
+    grid-column: 4 / 13;
+
+    margin-bottom: 24px;
+  }
+
+  .catalog__list {
+    margin-bottom: 32px;
+  }
+}

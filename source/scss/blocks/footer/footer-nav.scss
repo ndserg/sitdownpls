@@ -1,0 +1,30 @@
+.footer-nav__title {
+  margin: 0;
+  margin-bottom: 7px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $gray-dark;
+}
+
+.footer-nav__list {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 10px;
+}
+
+.footer-nav__item {
+  font-size: 0;
+  line-height: 0;
+}
+
+.footer-nav__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  color: $gray-light;
+  text-decoration: none;
+}

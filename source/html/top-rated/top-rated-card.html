@@ -1,0 +1,30 @@
+<article class="top-rated-card">
+  <div class="top-rated-card__img-wrapper">
+    <picture>
+      <source srcset="@img/top-rated/@@img.webp 1x, @img/top-rated/@@img@2x.webp 2x" type="image/webp">
+      <img class="top-rated-card__img" src="@img/top-rated/@@img.png" srcset="@img/top-rated/@@img@2x.png 2x" loading="lazy" alt="@@alt">
+    </picture>
+  </div>
+
+  <div class="top-rated-card__info">
+    <h3 class="top-rated-card__title">
+      <span>@@title</span>
+      <span>@@article</span>
+    </h3>
+
+    <p class="top-rated-card__price">
+      <span class="visually-hidden">Цена товара: </span>
+      @@price
+    </p>
+
+    <a class="top-rated-card__buy-btn btn-secondary" href="product.html">Купить</a>
+  </div>
+
+  <p class="top-rated-card__rating">
+    <svg class="top-rated-card__icon" width="13" height="12" aria-hidden="true">
+      <use xlink:href="@img/icons/sprite.svg#icon-star"></use>
+    </svg>
+    <span class="visually-hidden">Рейтинг товара: </span>
+    @@rating
+  </p>
+</article>

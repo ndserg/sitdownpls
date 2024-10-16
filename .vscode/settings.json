@@ -1,0 +1,13 @@
+{
+  "json.schemaDownload.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+
+  "path-autocomplete.pathMappings": {
+    "@img": "${folder}/source/img",
+    "@scss": "${folder}/source/scss",
+    "@js": "${folder}/source/js",
+  }
+}

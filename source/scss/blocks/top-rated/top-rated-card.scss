@@ -1,0 +1,168 @@
+.top-rated-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  height: 100%;
+  min-height: 278px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+
+  background-color: $input-default-bg;
+  border-radius: 10px;
+}
+
+.top-rated-card__img-wrapper {
+  display: flex;
+
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 74px;
+}
+
+.top-rated-card__img {
+  display: block;
+
+  max-height: 74px;
+
+  font-size: 0;
+  line-height: 0;
+}
+
+.top-rated-card__info {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 16px;
+
+  align-items: flex-start;
+
+  max-width: 100%;
+  height: 100%;
+}
+
+.top-rated-card__title {
+  display: flex;
+
+  flex-direction: column;
+
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $gray-dark;
+  overflow-wrap: anywhere;
+}
+
+.top-rated-card__price {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  color: $gray;
+  overflow-wrap: anywhere;
+}
+
+.top-rated-card__buy-btn {
+  padding-top: 10px;
+  padding-right: 23px;
+  padding-bottom: 10px;
+  padding-left: 23px;
+  margin-top: auto;
+
+  overflow-wrap: anywhere;
+}
+
+.top-rated-card__rating {
+  display: flex;
+
+  column-gap: 6px;
+
+  align-items: center;
+
+  order: -1;
+
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: $orange-default;
+  overflow-wrap: anywhere;
+}
+
+.top-rated-card__icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  width: 13px;
+  height: 12px;
+
+  fill: currentColor;
+}
+
+@media (min-width: $tablet-width) {
+  .top-rated-card {
+    min-height: 420px;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .top-rated-card__img-wrapper {
+    align-items: flex-end;
+
+    height: 140px;
+    margin-bottom: 16px;
+  }
+
+  .top-rated-card__img {
+    max-height: 140px;
+  }
+
+  .top-rated-card__info {
+    row-gap: 24px;
+
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .top-rated-card__title {
+    max-width: 100%;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .top-rated-card__buy-btn {
+    padding-top: 17px;
+    padding-right: 33px;
+    padding-bottom: 17px;
+    padding-left: 33px;
+  }
+
+  .top-rated-card__rating {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .top-rated-card__icon {
+    width: 16px;
+    height: 15px;
+  }
+}

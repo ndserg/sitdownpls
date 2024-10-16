@@ -1,0 +1,6 @@
+<ul class="specials__list list-reset">@@for (var i = 0; i < goods.length; i++) {
+  <li class="specials__item">
+    @@include('special-card.html', `+(JSON.stringify(goods[i]))+`)
+  </li>
+}
+</ul>

@@ -1,0 +1,204 @@
+.feedback__title {
+  margin-bottom: 8px;
+}
+
+.feedback__intro {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: $gray;
+}
+
+.feedback__form {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 30px;
+}
+
+.feedback__submit-group {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 12px;
+
+  align-items: flex-start;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+}
+
+.feedback__checkbox-label {
+  order: 1;
+
+  overflow-wrap: anywhere;
+}
+
+.feedback__checkbox-link {
+  display: inline-block;
+
+  margin-left: 4px;
+
+  font: inherit;
+  color: $primary;
+  overflow-wrap: anywhere;
+
+  background-color: transparent;
+  outline: 2px solid transparent;
+
+  transition: color 0.3s, outline 0.3s, background-color 0.3s;
+
+  &:visited {
+    color: $primary-active;
+
+    outline-color: transparent;
+  }
+
+  &:focus {
+    background-color: $primary-focus;
+  }
+
+  &:hover {
+    background-color: transparent;
+    outline-color: $primary-hover;
+  }
+
+  &:active {
+    color: $primary-active;
+
+    outline-color: $primary-active;
+  }
+}
+
+.feedback__btn {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: $pre-tablet-width) {
+  .feedback__wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    column-gap: $gap;
+
+    &::after {
+      display: block;
+
+      grid-column: span 2;
+
+      width: 100%;
+      height: 100%;
+
+      content: "";
+
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 187px 444px;
+    }
+  }
+
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-768.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-768.webp");
+  }
+
+  .feedback__form-content {
+    grid-column: span 4;
+  }
+
+  .feedback__title {
+    margin-bottom: 9px;
+  }
+
+  .feedback__checkbox-label {
+    font-size: 14px;
+
+    &::before {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .feedback__wrapper {
+    grid-template-columns: repeat(9, 1fr);
+
+    &::after {
+      grid-column: span 5;
+
+      background-size: 514px 316px;
+    }
+  }
+
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1024.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1024.webp");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .feedback__wrapper {
+    grid-template-columns: repeat(12, 1fr);
+
+    &::after {
+      grid-column: span 6;
+
+      background-size: 624px 383px;
+    }
+  }
+
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1340.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1340.webp");
+  }
+
+  .feedback__form-content {
+    grid-column: span 6;
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $pre-tablet-width) {
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-768@2x.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-768@2x.webp");
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $tablet-large) {
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1024@2x.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1024@2x.webp");
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $desktop-width) {
+  .no-webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1340@2x.png");
+  }
+
+  .webp .feedback__wrapper::after {
+    background-image: url("@img/form-bg-1340@2x.webp");
+  }
+}

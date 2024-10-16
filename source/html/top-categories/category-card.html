@@ -1,0 +1,21 @@
+<div class="category-card category-card--@@img_class@@if (is_main === true) { category-card--main}">
+  <div class="category-card__info">
+    <h3 class="category-card__title@@if (is_main === true) { category-card__title--big}">@@title</h3>
+
+    <a class="category-card__catalog-link link-next" href="catalog.html">
+      <span class="link-next__text">В каталог</span>
+      <span class="link-next__icon-wrapper">
+        <svg class="link-next__icon" width="10" height="8" aria-hidden="true">
+          <use xlink:href="@img/icons/sprite.svg#icon-arrow"></use>
+        </svg>
+      </span>
+    </a>
+  </div>
+
+  <ul class="category-card__list category-card__list--@@img_class list-reset@@if (is_main === true) { category-card__list--main}">@@for (var i = 0; i < sub_categories.length; i++) {
+    <li class="category-card__item">
+      <a class="category-card__link@@if (is_main === true) { category-card__link--big} txt-link-light" href="#">`+sub_categories[i]+`</a>
+    </li>
+  }
+  </ul>
+</div>

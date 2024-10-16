@@ -1,0 +1,271 @@
+.cooperation {
+  margin-bottom: 71px;
+}
+
+.cooperation__main {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 31px;
+
+  padding-top: 9px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: $gray;
+}
+
+.cooperation__title {
+  margin-bottom: 0;
+}
+
+.cooperation__flex {
+  display: flex;
+
+  flex-direction: column;
+
+  row-gap: 12px;
+}
+
+.cooperation__section-title {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: $gray-dark;
+}
+
+.cooperation__text {
+  margin: 0;
+
+  line-height: 180%;
+}
+
+.cooperation__item-labelled {
+  position: relative;
+
+  padding-left: 37px;
+
+  line-height: 150%;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    content: "";
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &--network::before {
+    background-image: url("@img/icons/network.svg");
+  }
+
+  &--briefcase::before {
+    background-image: url("@img/icons/briefcase.svg");
+  }
+
+  &--git::before {
+    background-image: url("@img/icons/git-pull-request.svg");
+  }
+}
+
+.cooperation__advantages-list {
+  row-gap: 10px;
+}
+
+.cooperation__advantages-title {
+  font-size: 14px;
+}
+
+.cooperation__advantage-title {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: $orange-default;
+}
+
+.cooperation__warranty-list {
+  row-gap: 9px;
+
+  padding: 0;
+  margin: 0;
+
+  counter-reset: count 0;
+}
+
+.cooperation__warranty-item {
+  position: relative;
+
+  padding-left: 26px;
+
+  counter-increment: count 1;
+
+  &::before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 180%;
+    color: $orange-default;
+
+    content: counter(count, decimal) '.';
+  }
+}
+
+.cooperation__promo {
+  display: flex;
+
+  align-items: center;
+
+  max-width: 400px;
+  min-height: 72px;
+  padding-left: 52px;
+
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.no-webp .cooperation__promo {
+  background-image: url("@img/pencil-bg.png");
+}
+
+.webp .cooperation__promo {
+  background-image: url("@img/pencil-bg.webp");
+}
+
+.cooperation__promo-text {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 150%;
+  color: $gray-dark;
+}
+
+@media (min-width: $pre-tablet-width) {
+  .cooperation__main {
+    row-gap: 33px;
+
+    padding-top: 0;
+
+    font-size: 16px;
+  }
+
+  .cooperation__section-title {
+    font-size: 24px;
+  }
+
+  .cooperation__advantages-list {
+    row-gap: 13px;
+  }
+
+  .cooperation__warranty-list {
+    row-gap: 13px;
+  }
+
+  .cooperation__promo {
+    max-width: 624px;
+    min-height: 116px;
+    padding-left: 109px;
+  }
+
+  .no-webp .cooperation__promo {
+    background-image: url("@img/pencil-bg-768.png");
+  }
+
+  .webp .cooperation__promo {
+    background-image: url("@img/pencil-bg-768.webp");
+  }
+
+  .cooperation__promo-text {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $tablet-large) {
+  .cooperation__wrapper {
+    display: grid;
+
+    grid-template-columns: repeat(9, 1fr);
+
+    column-gap: $gap;
+  }
+
+  .cooperation__main {
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-column: span 8;
+
+    column-gap: $gap;
+  }
+
+  .cooperation__title {
+    grid-column: span 8;
+  }
+
+  .cooperation__section {
+    grid-column: span 8;
+  }
+
+  .cooperation__fiatures {
+    grid-column: span 6;
+  }
+
+  .cooperation__warranty-list {
+    row-gap: 12px;
+  }
+
+  .cooperation__promo {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation {
+    margin-bottom: 69px;
+  }
+
+  .cooperation__wrapper {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .cooperation__promo {
+    background-size: 36px 54px;
+  }
+
+  .no-webp .cooperation__promo {
+    background-image: url("@img/pencil-bg@2x.png");
+  }
+
+  .webp .cooperation__promo {
+    background-image: url("@img/pencil-bg@2x.webp");
+  }
+}
+
+@media (min-resolution: 2dppx) and (min-width: $pre-tablet-width) {
+  .cooperation__promo {
+    background-size: 77px 116px;
+  }
+
+  .no-webp .cooperation__promo {
+    background-image: url("@img/pencil-bg-768@2x.png");
+  }
+
+  .webp .cooperation__promo {
+    background-image: url("@img/pencil-bg-768@2x.webp");
+  }
+}

@@ -1,0 +1,32 @@
+:root {
+  --font-family: "OpenSans", sans-serif;
+  --second-family: "PlayfairDisplay", sans-serif;
+}
+
+/* colors */
+$primary: #a65cf0;
+$primary-hover: #c998fb;
+$primary-active: #7033ac;
+$primary-focus: #ebd1ff;
+$gray: #666666;
+$gray-light: #999999;
+$gray-dark: #333333;
+$gray-bright: #eaeaea;
+$input-default-bg: #f6f6f6;
+$input-hover-bg: #eaeaea;
+$input-focus-bg: #f8efff;
+$orange-default: #ff862f;
+$orange-hover: #ffbd59;
+$orange-active: #bb370e;
+$orange-focus: #fff5d1;
+$green-light: #b8ec64;
+$promo-text: #d5b986;
+$white: #ffffff;
+
+/* viewports */
+$mobile-width: 320px;
+$pre-tablet-width: 648px;
+$tablet-width: 768px;
+$tablet-large: 1024px;
+$desktop-width: 1340px;
+$gap: 32px;

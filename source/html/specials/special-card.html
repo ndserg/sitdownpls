@@ -1,0 +1,43 @@
+<article class="special-card specials__card">
+  <div class="special-card__img-wrapper specials__img-wrapper">
+    <picture>
+      @@if (img_big !== false) {
+        <source media="(min-width: 1024px)" srcset="@img/specials/@@img_big.webp 1x, @img/specials/@@img_big@2x.webp 2x" type="image/webp">
+      <source media="(min-width: 1024px)" srcset="@img/specials/@@img_big.png 1x, @img/specials/@@img_big@2x.png 2x">
+      }
+      <source srcset="@img/specials/@@img.webp 1x, @img/specials/@@img@2x.webp 2x" type="image/webp">
+      <img class="special-card__img specials__img" src="@img/specials/@@img.png" srcset="@img/specials/@@img@2x.png 2x" loading="lazy" alt="@@alt">
+    </picture>
+
+  </div>
+
+  <div class="special-card__info">
+    <h3 class="special-card__title">
+      <span>@@title</span>
+      <span>@@article</span>
+    </h3>
+
+    <div class="special-card__prices">
+      <p class="special-card__discount-price">
+        <span class="visually-hidden">Цена со скидкой: </span>
+        @@new_price
+      </p>
+
+      <p class="special-card__old-price">
+        <span class="visually-hidden">Cтарая цена: </span>
+        <del>@@old_price</del>
+      </p>
+
+      <p class="special-card__discount"><span class="visually-hidden">Скидка </span>@@discount</p>
+
+      @@if (scheme !== false) {
+        <picture>
+          <source media="(min-width: 1340px)" srcset="@img/specials/@@scheme.webp 1x, @img/specials/@@scheme@2x.webp 2x" type="image/webp">
+          <img class="special-card__sheme" src="@img/specials/@@scheme.png" srcset="@img/specials/@@scheme.png 1x, @img/specials/@@scheme@2x.png 2x" width="230" height="107" alt="@@alt" loading="lazy">
+        </picture>
+      }
+    </div>
+
+    <a class="specials__buy-btn btn-secondary" href="product.html">Купить</a>
+  </div>
+</article>
